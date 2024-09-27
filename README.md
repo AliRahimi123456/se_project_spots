@@ -18,7 +18,7 @@ SE_PROJECT_SPOTS is a responsive website designed for both desktop and mobile us
 
 ## Deployment 
 this webpage is deployed to GitHub Pages
--Deployment Link: https://github.com/AliRahimi123456/se_project_spots/blob/main/README.md
+- [Deployment Link] https://github.com/AliRahimi123456/se_project_spots/blob/main/README.md
 
 - Intro
 - Figma
