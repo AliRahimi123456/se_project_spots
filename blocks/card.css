@@ -28,6 +28,7 @@
   line-height: 16px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
+  padding: 0;
 }
 
 @media screen and (max-width: 627px) {
