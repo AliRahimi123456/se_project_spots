@@ -36,6 +36,7 @@
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 32px;
   line-height: 32px;
+  color: rgba(33, 33, 33, 1);
 }
 .profile__edit-btn {
   display: flex;
@@ -55,6 +56,7 @@
 
 .profile__edit-btn:hover {
   cursor: pointer;
+  opacity: 1;
 }
 
 .profile__add-btn {
@@ -62,11 +64,13 @@
   background-color: rgba(33, 33, 33, 1);
   color: rgba(252, 245, 229, 1);
   padding: 18px 24px;
+  border: none;
   align-self: flex-end;
   border-radius: 8px;
 }
-.profile__add-btn {
+.profile__add-btn:hover {
   cursor: pointer;
+  opacity: 80%;
 }
 @media screen and (max-width: 627px) {
   .profile {
@@ -87,13 +91,13 @@
   .profile__description {
     margin: 0 0 32px;
     max-width: 288px;
-    font-family: Poppins, Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 16px;
   }
   .profile__name {
     margin-top: 12px;
     font-size: 20px;
+    line-height: 20px;
     max-width: 288px;
     margin-bottom: 6px;
   }
