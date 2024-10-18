@@ -32,7 +32,7 @@
   height: 40px;
   background-image: url(../images/close-button.png);
   background-color: transparent;
-
+  cursor: pointer;
   border: none;
 }
 .modal__title {
