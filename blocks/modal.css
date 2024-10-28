@@ -51,6 +51,7 @@
 }
 .modal__input {
   padding: 16px 12px;
+  font-size: 20px;
   gap: 10px;
   border-radius: 8px;
   border: 1px solid rgba(33, 33, 33, 0.4);
@@ -73,12 +74,12 @@
   .modal {
     padding: 10px;
   }
-  .modal_container {
+  .modal__container {
     padding: 12px;
   }
   .modal__title {
     font-size: 20px;
-    margin: 10px 0 34px;
+    margin: 10px 0 44px;
   }
   .modal__close-btn {
     top: 12px;
@@ -89,5 +90,8 @@
   }
   .modal__submit-btn {
     width: 100%;
+  }
+  .modal__input {
+    font-size: 16px;
   }
 }
