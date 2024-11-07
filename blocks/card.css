@@ -1,3 +1,7 @@
+.card {
+  position: relative;
+}
+
 .card__image {
   height: 413px;
   width: 100%;
@@ -18,11 +22,35 @@
   height: 20px;
   border: none;
   background-color: transparent;
-  opacity: 40%;
+  opacity: 0.4;
 }
 .card__like-btn:hover {
   cursor: pointer;
   opacity: 1;
+}
+.card__delete-button {
+  background: transparent url(../images/trash-default.png);
+  background-size: contain;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  /* z-index: 1; */
+  top: 10px;
+  right: 10px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.card__delete-button:hover {
+  background: transparent url(../images/trash-hover.png);
+}
+
+.card__like-btn_liked {
+  background-image: url("../images/like-iocon-liked.png");
+}
+
+.card__like-btn_liked:hover {
+  cursor: pointer;
 }
 .card__title {
   text-overflow: ellipsis;

@@ -11,9 +11,10 @@
   justify-content: center;
   padding: 0 20px;
   visibility: hidden;
-  padding: 10px;
+
+  /* padding: 10px; */
 }
-.modal_opened {
+.modal_is-opened {
   visibility: visible;
 }
 .modal__container {
@@ -32,12 +33,28 @@
   right: 50px;
   width: 40px;
   height: 40px;
-  background-image: url(../images/close-button.png);
+  background-image: url(../images/delete-btn.png);
   background-color: transparent;
   cursor: pointer;
   border: none;
 }
-.modal__title {
+.modal__close_type_preview {
+  background-image: url(../images/delete-hover-btn.png);
+  top: 1;
+  right: -5.5px;
+  opacity: 1;
+}
+.modal__container_type_preview {
+  padding: 0;
+}
+.modal__image {
+  width: 100%;
+  object-fit: contain;
+  max-width: 80vw;
+  max-height: 80vh;
+}
+
+.modal__close_type .modal__title {
   margin: 0 0 32px;
   font-weight: 500;
   font-size: 32px;
