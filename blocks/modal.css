@@ -35,11 +35,16 @@
   right: 50px;
   width: 40px;
   height: 40px;
-  background-image: url(../images/delete-btn.png);
   background-color: transparent;
+  background-image: url(../images/delete-btn.png);
   cursor: pointer;
   border: none;
 }
+
+.modal__close-btn:hover {
+  background-image: url(../images/close-dark.svg);
+}
+
 .modal__close-btn_type_preview {
   background-image: url(../images/Close\ Icon.svg);
   top: 0;
@@ -134,6 +139,7 @@
     width: 288px;
     height: 192px;
     object-fit: cover;
+    max-width: unset;
   }
   .modal__container-type_preview {
     width: fit-content;
@@ -143,8 +149,8 @@
     border-radius: 8px;
   }
   .modal__close-btn_type_preview {
-    top: -50px;
-    left: 230px;
+    top: -36px;
+    /* left: 230px; */
   }
 }
 

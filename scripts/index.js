@@ -84,8 +84,9 @@ function getCardElement(data) {
     openModal(previewModal);
     console.log(previewModal);
     previewModalImageEl.src = data.link;
+    previewModalImageEl.alt = data.name;
     // previewModal.textContent = data.name;
-    previewModalCaptionEl.alt = data.name;
+    previewModalCaptionEl.textContent = data.name;
   });
   return cardElement;
 }
