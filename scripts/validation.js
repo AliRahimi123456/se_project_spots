@@ -32,6 +32,10 @@ const hasInvalidInput = (inputList) => {
     return !input.validity.valid;
   });
 };
+const resetValidation = (formEl) => {
+  const inputs = formEl.querySelectorAll(settings.inputSelector);
+  inputs.forEach((inputEl) => hideInputError(formEl, inputEl));
+};
 
 const toggleButtonState = (inputList, buttonEl) => {
   if (hasInvalidInput(inputList)) {
