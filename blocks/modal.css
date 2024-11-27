@@ -11,9 +11,13 @@
   justify-content: center;
   padding: 0 20px;
   visibility: hidden;
+  opacity: 0;
 }
+
 .modal_is-opened {
   visibility: visible;
+  transition: visibility 2s, opacity 2s linear;
+  opacity: 1;
 }
 .modal__container {
   display: flex;
@@ -111,6 +115,10 @@
   background-color: rgba(33, 33, 33, 1);
   color: rgba(252, 245, 229, 1);
   border-radius: 8px;
+}
+
+.modal__button_disabled {
+  background-color: grey;
 }
 
 @media screen and (max-width: 627px) {
