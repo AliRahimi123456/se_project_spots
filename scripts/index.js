@@ -133,15 +133,14 @@ function handleEsc(evt) {
 }
 function handleOverlay(evt) {
   if (evt.target.classList.contains("modal")) {
-    const currentlyOpenedModal = document.querySelector(".modal_is-opened");
-    closeModal(currentlyOpenedModal);
+    closeModal(evt.target);
   }
 }
-resetValidation(editFormElement);
 
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
+  resetValidation(editFormElement, settings);
   openModal(editProfileModal);
 });
 
