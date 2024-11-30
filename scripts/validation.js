@@ -73,13 +73,13 @@ const enableValidation = (config) => {
   });
 };
 
-document.querySelectorAll(settings.formSelector).forEach((formEl) => {
-  const resetButton = formEl.querySelector('button[type="reset"]');
-  if (resetButton) {
-    resetButton.addEventListener("click", () =>
-      resetValidation(formEl, settings)
-    );
-  }
-});
+// document.querySelectorAll(settings.formSelector).forEach((formEl) => {
+//   const resetButton = formEl.querySelector('button[type="reset"]');
+//   if (resetButton) {
+//     resetButton.addEventListener("click", () =>
+//       resetValidation(formEl, settings)
+//     );
+//   }
+// });
 
 enableValidation(settings);
