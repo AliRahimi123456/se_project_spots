@@ -50,7 +50,7 @@ const cardModalCloseBtn = cardModal.querySelector(".modal__close-btn");
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 const cardBtn = document.querySelector(".profile__add-btn");
-const cardSubmitBtn = document.querySelector(".modal__submit-btn");
+const cardSubmitBtn = cardForm.querySelector(".modal__submit-btn");
 const cardNameInput = cardForm.querySelector("#add-card-name-input");
 const cardLinkInput = cardForm.querySelector("#add-card-link-input");
 
