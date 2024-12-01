@@ -122,7 +122,7 @@ function handleAddCardSubmit(evt) {
   closeModal(cardModal);
 
   cardForm.reset();
-  disableButton(cardSubmitBtn);
+  disableButton(cardSubmitBtn, settings);
 }
 
 function handleEsc(evt) {
