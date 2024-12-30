@@ -1,3 +1,10 @@
+import "./index.css";
+import {
+  enableValidation,
+  settings,
+  resetValidation,
+} from "../blocks/scripts/validation.js";
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -68,13 +75,11 @@ function getCardElement(data) {
   const cardLikeBtn = cardElement.querySelector(".card__like-btn");
   const cardDeleteBtn = cardElement.querySelector(".card__delete-button");
 
-  console.log("we are checking is it working or no?");
   cardNameElement.textContent = data.name;
   cardImageElement.src = data.link;
   cardImageElement.alt = data.name;
 
   cardLikeBtn.addEventListener("click", () => {
-    console.log("we are clicking");
     cardLikeBtn.classList.toggle("card__like-btn_liked");
   });
 
@@ -83,10 +88,8 @@ function getCardElement(data) {
   });
   cardImageElement.addEventListener("click", () => {
     openModal(previewModal);
-    console.log(previewModal);
     previewModalImageEl.src = data.link;
     previewModalImageEl.alt = data.name;
-    // previewModal.textContent = data.name;
     previewModalCaptionEl.textContent = data.name;
   });
   return cardElement;
@@ -164,7 +167,9 @@ editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
 
 initialCards.forEach((item) => {
-  console.log("we are firing the for each");
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
 });
+
+// Enable form validation
+enableValidation(settings);
