@@ -81,11 +81,7 @@
   font-size: 32px;
   line-height: 1;
 }
-.modal__title-avatar {
-  padding-right: 39.66px;
-  padding-left: 66px;
-  margin-bottom: 12px;
-}
+
 .modal__label {
   font-family: Poppins, Arial, Helvetica, sans-serif;
   margin: 0 0 8px;
@@ -96,7 +92,7 @@
   padding: 16px 12px;
   font-size: 20px;
   gap: 10px;
-  /* margin: 8px 0 0; */
+
   border-radius: 8px;
   border: 1px solid rgba(33, 33, 33, 0.4);
 }
@@ -139,6 +135,7 @@
   font-size: 16px;
   cursor: pointer;
   transform: transform 0.3s ease;
+  gap: 20px;
 }
 .modal__submit-btn:hover {
   transform: scale(1.1);
@@ -152,6 +149,7 @@
   color: rgba(252, 245, 229, 1);
   border-radius: 8px;
   transform: transform 0.3s ease;
+  gap: 20px;
 }
 .modal__cancel-btn:hover {
   transform: scale(1.1);
@@ -195,6 +193,5 @@
   }
   .modal__close-btn_type_preview {
     top: -36px;
-    /* left: 230px; */
   }
 }

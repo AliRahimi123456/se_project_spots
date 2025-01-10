@@ -27,22 +27,24 @@
 
 .profile__avatar-btn::after {
   content: "Edit Avatar";
+  margin-bottom: 12px;
+}
+.profile__avatar-btn {
+  display: flex;
   color: white;
-  margin-right: 39.66px;
-  margin-left: 39px;
-  padding-bottom: 12px;
 }
 
 .profile__avatar {
   height: 190px;
   width: 190px;
   border-radius: 8px;
+  text-align: block;
 }
 
 .profile__column {
   display: flex;
   flex-direction: column;
-  /* margin-top: 12px; */
+
   max-width: 420px;
 }
 .profile__description {
