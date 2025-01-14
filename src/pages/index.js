@@ -21,25 +21,11 @@ if (!cardsList) {
   console.error("Error: .cards__list element not found!");
 }
 
-api
-  .getAppInfo()
-  .then(([cards, userInfo]) => {
-    console.log(cards);
-    cards.forEach((item) => {
-      const cardElement = getCardElement(item);
-      cardsList.append(cardElement);
-    });
-    document.querySelector(".profile__avatar").src = userInfo.avatar;
-    document.querySelector(".profile__name").textContent = userInfo.name;
-    document.querySelector(".profile__description").textContent =
-      userInfo.about;
-  })
-  .catch(console.error);
-
 // Profile elements
 const profileEditButton = document.querySelector(".profile__edit-btn");
 const cardModalBtn = document.querySelector(".profile__new-post-btn");
 const avatarModalBtn = document.querySelector(".profile__avatar-btn");
+const profileAvatar = document.querySelector(".profile__avatar");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 
@@ -83,6 +69,21 @@ const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
 
 let selectedCard;
 let selectedCardId;
+
+api
+  .getAppInfo()
+  .then(([cards, userInfo]) => {
+    console.log(cards);
+    cards.forEach((item) => {
+      const cardElement = getCardElement(item);
+      cardsList.append(cardElement);
+    });
+    profileAvatar.src = userInfo.avatar;
+    profileName.textContent = userInfo.name;
+    profileDescription.textContent = userInfo.about;
+  })
+  .catch(console.error);
+
 //remove evt.target.classList.toggle("card__like-button_active");
 //TODO 1. check whether card is currently liked or not
 //const isLiked = ???
@@ -182,7 +183,7 @@ function handleDeleteCard(cardElement, data) {
 function handleDeleteSubmit(evt) {
   evt.preventDefault();
   const submitBtn = evt.submitter;
-  setButtonText(submitBtn, true);
+  setButtonText(submitBtn, true, "Delete", "Deleting...");
   api
     .deleteCard(selectedCardId)
     .then(() => {
@@ -191,7 +192,7 @@ function handleDeleteSubmit(evt) {
     })
     .catch(console.error)
     .finally(() => {
-      setButtonText(submitBtn, false);
+      setButtonText(submitBtn, false, "Delete", "Deleting...");
     });
 }
 
@@ -202,7 +203,7 @@ function handleAvatarSubmit(evt) {
   api
     .editAvatarInfo(avatarInput.value)
     .then((data) => {
-      document.querySelector(".profile__avatar").src = data.avatar;
+      profileAvatar.src = data.avatar;
       closeModal(avatarModal);
     })
     .catch(console.error)
@@ -210,6 +211,35 @@ function handleAvatarSubmit(evt) {
       setButtonText(submitBtn, false);
     });
 }
+//THE NEW CODE
+// const profileAvatar = document.querySelector(".profile__avatar");
+// const profileName = document.querySelector(".profile__name");
+// const profileDescription = document.querySelector(".profile__description");
+
+// api.getAppInfo().then(([cards, userInfo]) => {
+//   profileAvatar.src = userInfo.avatar;
+//   profileName.textContent = userInfo.name;
+//   profileDescription.textContent = userInfo.about;
+
+//   cards.forEach((item) => {
+//     const cardElement = getCardElement(item);
+//     cardsList.append(cardElement);
+//   });
+// });
+
+// function handleEditFormSubmit(evt) {
+//   handleSubmit(() => editProfile(nameInput.value, jobInput.value), evt);
+// }
+
+// function handleDeleteSubmit(evt) {
+//   handleSubmit(() => deleteCard(cardId), evt, "Deleting...");
+// }
+
+// // Universal Modal Close Button Handler
+// document.querySelectorAll(".modal__close").forEach((button) => {
+//   const popup = button.closest(".modal");
+//   button.addEventListener("click", () => closeModal(popup));
+// });
 
 function handleNewCardSubmit(evt) {
   evt.preventDefault();
@@ -263,6 +293,12 @@ editProfileCloseBtn.addEventListener("click", () =>
   closeModal(editProfileModal)
 );
 cardBtn.addEventListener("click", () => openModal(cardModal));
+
+// const closeButtons = document.querySelectorAll('.modal__close');
+//closebuttons.forEach((button) => {
+// const popup = button.closest('.modal');
+//button.addEventListener('click', () => closePopup(popup));
+//})
 cardModalCloseBtn.addEventListener("click", () => closeModal(cardModal));
 previewModalCloseBtn.addEventListener("click", () => closeModal(previewModal));
 avatarModalCloseBtn.addEventListener("click", () => closeModal(avatarModal));
