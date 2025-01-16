@@ -49,7 +49,7 @@ const avatarInput = avatarModal.querySelector("#profile-avatar-input");
 // Delete form elements
 const deleteModal = document.querySelector("#delete-modal");
 const cancelBtn = deleteModal.querySelector(".modal__cancel-btn");
-const deleteForm = deleteModal.querySelector(".modal__form");
+const deleteForm = deleteModal.querySelector(".modal__form-delete");
 const modalCloseBtn = deleteModal.querySelector(".modal__close-btn");
 // Card form elements
 const cardModal = document.querySelector("#add-card-modal");
@@ -152,6 +152,7 @@ function closeModal(modal) {
 
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
+  console.log("we are checking if it is working.");
   // TODO Change text content to "Saving..."
   const submitBtn = evt.submitter;
   setButtonText(submitBtn, true);
@@ -167,10 +168,11 @@ function handleEditFormSubmit(evt) {
       closeModal(editProfileModal);
     })
     .catch(console.error)
-    .finally(() => {});
+    .finally(() => {
+      setButtonText(submitBtn, false);
+    });
   //TODO - call setButtonText instead
   // submitBtn.textContent = "Save";
-  setButtonText(submitBtn, false);
 }
 //TODO - implement loading text for all other form submissions
 
@@ -211,29 +213,6 @@ function handleAvatarSubmit(evt) {
       setButtonText(submitBtn, false);
     });
 }
-//THE NEW CODE
-// const profileAvatar = document.querySelector(".profile__avatar");
-// const profileName = document.querySelector(".profile__name");
-// const profileDescription = document.querySelector(".profile__description");
-
-// api.getAppInfo().then(([cards, userInfo]) => {
-//   profileAvatar.src = userInfo.avatar;
-//   profileName.textContent = userInfo.name;
-//   profileDescription.textContent = userInfo.about;
-
-//   cards.forEach((item) => {
-//     const cardElement = getCardElement(item);
-//     cardsList.append(cardElement);
-//   });
-// });
-
-// function handleEditFormSubmit(evt) {
-//   handleSubmit(() => editProfile(nameInput.value, jobInput.value), evt);
-// }
-
-// function handleDeleteSubmit(evt) {
-//   handleSubmit(() => deleteCard(cardId), evt, "Deleting...");
-// }
 
 // // Universal Modal Close Button Handler
 // document.querySelectorAll(".modal__close").forEach((button) => {

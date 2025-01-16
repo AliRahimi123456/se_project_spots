@@ -36,8 +36,8 @@
           </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
-            <p class="profile__description">Civil Aviator</p>
-            <%=require('./images/pencil.svg')%>
+            <p class="profile__description">Civil Avatar</p>
+            <!-- <%=require('./images/pencil.svg')%> -->
             <button type="button" class="profile__edit-btn">
               <img
                 src="<%=require('./images/pencil.svg')%>"
@@ -203,8 +203,10 @@
         <h3 class="modal__title">
           Are you sure you want to delete this image?
         </h3>
-        <form class="modal__form" id="delete-form">
-          <button type="submit" class="modal__submit-btn">Delete</button>
+        <form class="modal__form-delete" id="delete-form">
+          <button type="submit" class="modal__submit-btn modal__delete-btn">
+            Delete
+          </button>
           <button type="button" class="modal__cancel-btn">Cancel</button>
         </form>
       </div>

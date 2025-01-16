@@ -122,19 +122,45 @@
 .modal__submit-btn_disabled {
   background-color: grey;
 }
+.modal__title {
+  font-weight: 500;
+  font-family: Poppins, sans-serif;
+  size: 24px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
 
-.modal_confirmation .modal__close-btn {
+.modal__close-btn {
   right: -40px;
   background-image: url(../images/Close\ Icon.png-white);
   top: 0;
 }
+.modal__form-delete {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 .modal__submit-btn {
-  background-color: red;
+  /* background-color: red; */
   color: white;
   border: none;
   font-size: 16px;
   cursor: pointer;
   transform: transform 0.3s ease;
+  /* margin: auto; */
+}
+.modal__delete-btn {
+  background-color: rgba(255, 101, 101, 1);
+  color: rgba(33, 33, 33, 1);
+  /* margin-bottom: 12px; */
+
+  font-weight: 500;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
 }
 .modal__submit-btn:hover {
   transform: scale(1.1);
@@ -147,7 +173,14 @@
   background-color: rgba(33, 33, 33, 1);
   color: rgba(252, 245, 229, 1);
   border-radius: 8px;
-  transform: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  font-weight: 500;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  /* margin: 0 auto; */
+  display: block;
 }
 .modal__cancel-btn:hover {
   transform: scale(1.1);
@@ -161,17 +194,35 @@
   }
   .modal__title {
     font-size: 20px;
-    margin: 10px 0 44px;
+    margin: 0 0 20px;
   }
   .modal__close-btn {
     top: 12px;
     right: 12px;
   }
+  .modal__close-btn {
+    right: 6px;
+    top: unset;
+    bottom: calc(100% + 16px);
+  }
+
   .modal__label {
     margin-bottom: 24px;
   }
   .modal__submit-btn {
-    width: 100%;
+    /* width: 100%; */
+  }
+  .modal__delete-btn {
+    padding: 18px 0;
+    font-size: 16px;
+    width: 156px;
+    display: block;
+    text-align: center;
+  }
+  .modal__form-delete {
+    gap: 12px;
+    flex-direction: column;
+    align-items: center;
   }
   .modal__input {
     font-size: 16px;

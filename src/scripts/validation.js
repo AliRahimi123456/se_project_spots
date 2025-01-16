@@ -28,14 +28,18 @@ const checkInputValidity = (formEl, inputEl, config) => {
 };
 
 const hasInvalidInput = (inputList) => {
+  console.log(inputList);
   return inputList.some((input) => {
     return !input.validity.valid;
   });
 };
 
 export const resetValidation = (formEl, config) => {
-  const inputs = formEl.querySelectorAll(config.inputSelector);
+  const inputs = Array.from(formEl.querySelectorAll(config.inputSelector));
+  // const inputs = formEl.querySelectorAll(config.inputSelector);
+  const buttonEl = formEl.querySelector(config.submitButtonSelector);
   inputs.forEach((inputEl) => hideInputError(formEl, inputEl, config));
+  toggleButtonState(inputs, buttonEl, config);
 };
 
 export const disableButton = (buttonEl, config) => {
