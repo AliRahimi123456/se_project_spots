@@ -112,6 +112,11 @@
 }
 
 .modal__submit-btn {
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+
   width: 156px;
   padding: 18px 0;
   background-color: rgba(33, 33, 33, 1);
@@ -143,18 +148,15 @@
   gap: 20px;
 }
 .modal__submit-btn {
-  /* background-color: red; */
   color: white;
   border: none;
   font-size: 16px;
   cursor: pointer;
   transform: transform 0.3s ease;
-  /* margin: auto; */
 }
 .modal__delete-btn {
   background-color: rgba(255, 101, 101, 1);
   color: rgba(33, 33, 33, 1);
-  /* margin-bottom: 12px; */
 
   font-weight: 500;
   font-family: Poppins, sans-serif;
@@ -179,7 +181,7 @@
   font-size: 16px;
   line-height: 16px;
   text-align: center;
-  /* margin: 0 auto; */
+
   display: block;
 }
 .modal__cancel-btn:hover {
@@ -210,7 +212,7 @@
     margin-bottom: 24px;
   }
   .modal__submit-btn {
-    /* width: 100%; */
+    width: 100%;
   }
   .modal__delete-btn {
     padding: 18px 0;
