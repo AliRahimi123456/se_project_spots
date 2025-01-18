@@ -48,12 +48,6 @@
   background-image: url(../images/close-dark.svg);
 }
 
-.modal__close-btn_type_preview {
-  background-image: url(../images/Close\ Icon.svg);
-  top: 0;
-  right: -40px;
-  opacity: 1;
-}
 .modal__container_type_preview {
   padding: 0;
   background-color: transparent;
@@ -147,6 +141,12 @@
   right: 50px;
   background-image: url(../images/Close\ Icon.svg);
   top: 32px;
+}
+.modal__close-btn_type_preview {
+  background-image: url(../images/Close\ Icon.white.png);
+  top: 0;
+  right: -40px;
+  opacity: 1;
 }
 .modal__form-delete {
   display: flex;
