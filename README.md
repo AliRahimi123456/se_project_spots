@@ -45,5 +45,6 @@ Good luck and have fun!
 
 ## video
 
-https://www.loom.com/share/eb3aab8b6fca492b8e7964ee0b4217c9?sid=e3f2ce75-fde7-4083-92ca-c2a545605c9a
+https://www.loom.com/share/64a1adfd123f45468ad4978a9a55a2ca?sid=5bf0e224-509e-4f97-86e1-c4ad81b1582d
+
 # se_project_todo_app
